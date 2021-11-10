@@ -1,6 +1,7 @@
 package com.test.day1;
 
 import java.time.LocalDate;
+import java.util.Scanner;
 
 public class CandidateApp {
 	public static void main(String[] args) {
@@ -28,14 +29,35 @@ public class CandidateApp {
 		*/
 		
 		//we are creating a Candidate object
-		Person p1 =  new Candidate(12121L,"Heena",33344L,LocalDate.now(),Position.PROGRAMMER);
-		System.out.println(p1);
-		applyForJob(p1);
+		/*
+		 * Person p1 = new
+		 * Candidate(12121L,"Heena",33344L,LocalDate.now(),Position.PROGRAMMER);
+		 * System.out.println(p1); applyForJob(p1);
+		 * 
+		 * p1=new Employee(12131L,"Rakesh",44545L,LocalDate.of(2021, 3,
+		 * 14),Position.CEO,200000,LocalDate.now(),99999L); System.out.println(p1);
+		 * applyForJob(p1);
+		 */
+		Person p1 = null ;
+		Scanner scanner = new Scanner(System.in);
 		
-		p1=new Employee(12131L,"Rakesh",44545L,LocalDate.of(2021, 3, 14),Position.CEO,200000,LocalDate.now(),99999L);
-		System.out.println(p1);
-		applyForJob(p1);
+		System.out.println("Enter type of Person C for Candidate or E for Employee");
 		
+		String choice =  scanner.next();
+		
+		if (choice.equalsIgnoreCase("C")) {
+			
+			p1 =  new Candidate(12121L,"Heena",33344L,LocalDate.now(),Position.PROGRAMMER);
+			 
+		}
+		else
+		{
+			p1=new Employee(12131L,"Rakesh",44545L,LocalDate.of(2021, 3,
+					  14),Position.CEO,200000,LocalDate.now(),99999L);
+			
+		}
+		
+		applyForJob(p1);
 		
 	}
 
