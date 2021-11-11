@@ -18,9 +18,13 @@ public class Candidate extends Person{
 		this.candidateId = candidateId;
 		this.dateOfApplication = dateOfApplication;
 		this.position = position;
+		
 	}
 
-
+   public void printPersonId() {
+	   //can i say this.id this.getId
+	   System.out.println(this.id);
+   }
 	
 	
 	

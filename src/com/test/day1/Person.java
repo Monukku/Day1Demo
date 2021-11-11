@@ -3,8 +3,11 @@ package com.test.day1;
 import java.time.LocalDate;
 
 public class Person {
+	//protected  will be useful when the child class wants to use it directly 
+	//by using this keyword
 	
-	private Long id;
+	
+	protected Long id;
 	private String name;
 	private String mobileNumber;
 	//Person has a Address
@@ -15,6 +18,10 @@ public class Person {
 	
 	
 	
+	public void printId() {
+		System.out.println(this.id);
+		
+	}
 	
 	
 	@Override
