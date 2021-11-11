@@ -1,6 +1,8 @@
 package com.test.day2;
 
-public class Circle extends Point {
+import java.util.Scanner;
+
+public class Circle extends Point implements Printable,Colorable {
     //data members
 	
 	private double radius;
@@ -39,6 +41,24 @@ public class Circle extends Point {
 	@Override
 	public String toString() {
 		return super.toString() + "Circle [radius=" + radius + "]";
+	}
+
+	@Override
+	public void print() {
+		
+		System.out.println("circle of radius "+this.radius + "is getting printed");
+		
+	}
+
+	@Override
+	public void fill() {
+		Scanner scanner =  new Scanner(System.in);
+		System.out.println("Enter your fav color");
+		String color =  scanner.next();
+		
+		System.out.println("filling  circle"+color+" color");
+
+		
 	}
 	
 }

@@ -1,6 +1,6 @@
 package com.test.day2;
 
-public class Cube extends Rectangle {
+public class Cube extends Rectangle implements Printable {
 	//data members
 	
 	private double height;
@@ -36,6 +36,12 @@ public class Cube extends Rectangle {
 	
 	public double calcVol() {
 		return this.calcArea() *this.height;
+	}
+
+	@Override
+	public void print() {
+		System.out.println("Cube gettingprinted");
+		
 	}
 	
 

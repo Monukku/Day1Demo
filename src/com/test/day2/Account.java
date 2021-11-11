@@ -2,8 +2,11 @@ package com.test.day2;
 
 public class Account implements Transaction,NewTransaction{
 
+	//data members
 	private Long accountId;
 	private double balance;
+	
+	//getters and setters
 	public Long getAccountId() {
 		return accountId;
 	}
@@ -16,15 +19,19 @@ public class Account implements Transaction,NewTransaction{
 	public void setBalance(double balance) {
 		this.balance = balance;
 	}
+	
+	//one constructor for creating Account object
 	public Account(Long accountId, double balance) {
 		super();
 		this.accountId = accountId;
 		this.balance = balance;
 	}
+	
 	@Override
 	public String toString() {
 		return "Account [accountId=" + accountId + ", balance=" + balance + "]";
 	}
+	
 	@Override
 	public double deposit(double amount) {
 		return this.balance+=amount;
